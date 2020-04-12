@@ -158,8 +158,10 @@ p {
 }
 .img img {
   max-width: 100%;
+  height: auto;
   border: 1px solid #000;
   margin-bottom: 20px;
+  display: block;
 }
 .img small {
   flex-basis: 100%;
