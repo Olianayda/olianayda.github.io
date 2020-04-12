@@ -3,37 +3,31 @@ let d = document;
 d.querySelectorAll('.js-svg').forEach(place => {
   let svg = d.querySelector(place.dataset.svg).cloneNode(true);
   svg.removeAttribute('id');
-
-  if (place.dataset.follow) {
-    svg.classList.add('js-follow');
-  }
-
   place.parentNode.replaceChild(svg, place);
 });
 
 let body = d.querySelector('body'),
-  topBall = d.querySelector('.js-follow .eye-ball-left'),
-  topPupil = d.querySelector('.js-follow .eye-pupil-left'),
-  topMouseX = (topBall.getBoundingClientRect().left),
-  topMouseY = (topBall.getBoundingClientRect().top),
-  rightBall = d.querySelector('.js-follow .eye-ball-right'),
-  rightPupil = d.querySelector('.js-follow .eye-pupil-right'),
-  rightMouseX = (rightBall.getBoundingClientRect().left),
-  rightMouseY = (rightBall.getBoundingClientRect().top);
+  eyes = d.querySelectorAll('.eye-ball');
 
 body.addEventListener('mousemove', (e) => {
-  let topRadianDegrees = Math.atan2(e.pageX - topMouseX, e.pageY - topMouseY);
-  let topRotationDegrees = (topRadianDegrees * (180/ Math.PI) * -1) + 400;
-  let rightRadianDegrees = Math.atan2(e.pageX - rightMouseX, e.pageY - rightMouseY);
-  let rightRotationDegrees = (rightRadianDegrees * (180/ Math.PI) * -1) + 220;
+  eyes.forEach(ball => {
+    let rect = ball.getBoundingClientRect();
 
-  topBall.style.transform = `rotate(${topRotationDegrees}deg)`;
-  topBall.style.transformOrigin = `-10px -10px`;
-  topPupil.style.transform = `rotate(-${topRotationDegrees}deg)`;
+    if (0 == rect.width || 0 == rect.height) {
+      return;
+    }
 
-  rightBall.style.transform = `rotate(${rightRotationDegrees}deg)`;
-  rightBall.style.transformOrigin = `10px 10px`;
-  rightPupil.style.transform = `rotate(-${rightRotationDegrees}deg)`;
+    let pupil = ball.querySelector('.eye-pupil'),
+        mouseX = rect.left,
+        mouseY = rect.top,
+        degDiff = ball.dataset.eye == 'left' ? 400 : 220,
+        radianDeg = Math.atan2(e.clientX - mouseX, e.clientY - mouseY),
+        rotationDeg = (radianDeg * (180/ Math.PI) * -1) + degDiff;
+
+    ball.style.transform = `rotate(${rotationDeg}deg)`;
+    ball.style.transformOrigin = ball.dataset.eye == 'left' ? `-10px -10px` : `10px 10px`;
+    pupil.style.transform = `rotate(-${rotationDeg}deg)`;
+  });
 });
 
 d.querySelector('#to-contacts').addEventListener('click', (e) => {
@@ -56,11 +50,23 @@ d.querySelectorAll('.case-nav a').forEach(link => {
   });
 });
 
-d.querySelector('.js-case-link').addEventListener('mousedown', () => {
-  d.querySelector('.js-follow .eye-closed').style.display = 'block';
-  d.querySelector('.js-follow .eye-opened').style.display = 'none';
-  d.querySelector('.js-follow .eye-eyelid').style.fill = '#FFEDDC';
-});
+setTimeout(() => {
+  d.querySelectorAll('.eye').forEach(eye => {
+    eye.querySelector('.eye-closed').style.display = 'none';
+    eye.querySelector('.eye-opened').style.display = 'block';
+    eye.querySelector('.eye-eyelid').style.fill = '#FFFFFF';
+  });
+}, 500);
+
+d.querySelectorAll('.js-blink').forEach(link => {
+  link.addEventListener('mousedown', () => {
+    d.querySelectorAll('.eye').forEach(eye => {
+      eye.querySelector('.eye-closed').style.display = 'block';
+      eye.querySelector('.eye-opened').style.display = 'none';
+      eye.querySelector('.eye-eyelid').style.fill = '#FFEDDC';
+    });
+  });
+})
 
 d.querySelectorAll('.js-include-eye').forEach(eye => {
   let svg = d.querySelector(`#${eye.dataset.eye}-eye`);
