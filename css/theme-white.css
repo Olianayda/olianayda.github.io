@@ -1,0 +1,25 @@
+:root {
+  --bg-color: #FFFFFF;
+  --text-color: #000000;
+  --header-color: #000000;
+
+  --a-color: #000000;
+  --a-hover-color: #000000;
+  --a-active-color: #FFFFFF;
+  --a-decoration: underline;
+  --a-decoration-hover: none;
+
+  --btn-text-color: #FFF;
+  --btn-bg-color: #EB5757;
+  --btn-bg-hover-color: #FC6363;
+  --btn-bg-active-color: #E45151;
+  --btn-border-radius: 8px;
+
+  --eye-shadow-color: #BDBDBD;
+}
+
+@media (max-width: 768px) {
+  .top .link__case {
+    display: none;
+  }
+}
