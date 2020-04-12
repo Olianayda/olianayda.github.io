@@ -18,11 +18,11 @@
   --eye-shadow-color: #FFD2A8;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:500&display=swap');
-
-.eye-closed {
+.eye-opened {
   display: none;
+}
+.eye-closed {
+  display: block;
 }
 
 body {
@@ -47,19 +47,15 @@ a:active {
 h1, h2 {
   font: 900 52px/1.23 'Rubik', sans-serif;
   color: var(--header-color);
-}
-
-h1 {
-  margin-bottom: 0.825em;
+  margin-bottom: 40px;
 }
 
 h2 {
   font-size: 32px;
-  margin-bottom: 0.565em;
 }
 
 p {
-  margin-bottom: 1em;
+  margin-bottom: 40px;
 }
 
 .btn {
@@ -158,16 +154,16 @@ p {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 2em 0;
+  margin-bottom: 40px;
 }
 .img img {
   max-width: 100%;
   border: 1px solid #000;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 .img small {
   flex-basis: 100%;
-  font: 400 12px/1.175 "Rubik", sans-serif;
+  font: 400 12px/1.175 'Rubik', sans-serif;
 }
 .img__80p {
   width: 80%;
@@ -190,8 +186,8 @@ p {
 
 .case-nav {
   width: 65%;
-  font: 400 12px/1.23 "Rubik", sans-serif;
-  margin-bottom: 1.75rem;
+  font: 400 12px/1.23 'Rubik', sans-serif;
+  margin: 60px 0 40px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -212,18 +208,20 @@ p {
   background-color: #fff;
 }
 
+.footer h2 {
+  margin-bottom: 14px;
+}
+
 .contacts {
   color: var(--a-color);
   position: relative;
 }
-.contacts::after {
-  content: "⇩";
-  font-size: 134px;
-  color: var(--text-color);
+.contacts svg {
   position: absolute;
   top: 50%;
   left: 390px;
-  transform: rotate(90deg) translateX(-100%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .mobile-eye svg {
@@ -260,7 +258,6 @@ p {
 
   h1, h2 {
     font-size: 30px;
-    margin-bottom: 0.5em;
   }
 
   .btn {
@@ -325,15 +322,15 @@ p {
     display: none;
   }
 
-  .contacts::after {
-    font-size: 94px;
-    top: -90px;
-    left: 220px;
-    transform: rotate(90deg);
+  .contacts svg {
+    top: -30px;
+    left: 190px;
+    -webkit-transform: translateY(-50%) scale(0.7);
+    transform: translateY(-50%) scale(0.7);
   }
 
   .mobile-eye {
-    padding: 0 10px 0.565em;
+    padding: 0 80px 0.565em 10px;
     margin: 0 -10px;
     position: relative;
     overflow: hidden;
