@@ -153,7 +153,9 @@ p {
 .img {
   width: 100%;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
   margin-bottom: 40px;
 }
 .img img {
