@@ -1,21 +1,22 @@
 :root {
-  --bg-color: #FFEDDC;
-  --text-color: #F2994A;
-  --header-color: #EB5757;
+  --bg-color: #FFF5EC;
+  --text-color: #170202;
+  --h3-color: #D17171;
 
-  --a-color: #EB5757;
-  --a-hover-color: #FF9393;
-  --a-active-color: #DF4949;
+  --a-color: #170202;
+  --a-hover-color: #260A0A;
+  --a-active-color: #311515;
 
   --btn-text-color: #FFF;
-  --btn-bg-color: #EB5757;
+  --btn-bg-color: #D17171;
   --btn-bg-hover-color: #FC6363;
   --btn-bg-active-color: #E45151;
   --btn-border-radius: 8px;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Rubik:900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:500&display=swap');]
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap');
+
 
 #top-eye {
   width: 313px;
@@ -34,14 +35,20 @@
 }
 
 body {
-  background-color: var(--bg-color);
-  font: 500 24px/1.3 'Red Hat Text', sans-serif;
-  color: var(--text-color);
+//styleName: Body 1;
+font-family: Red Hat Text;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 36px;
+letter-spacing: 0.02em;
+text-align: left;
+
 }
 
 a {
   color: var(--a-color);
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover {
   color: var(--a-hover-color);
@@ -53,8 +60,27 @@ a:active {
 }
 
 h1, h2 {
-  font: 900 52px/1.23 'Rubik', sans-serif;
-  color: var(--header-color);
+  //styleName: H1;
+font-family: Merriweather;
+font-size: 48px;
+font-style: normal;
+font-weight: 900;
+line-height: 70px;
+letter-spacing: 0.03em;
+text-align: left;
+
+}
+
+h3 {
+  //styleName: H3;
+font-family: Merriweather;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0em;
+text-align: left;
+
 }
 
 h1 {
