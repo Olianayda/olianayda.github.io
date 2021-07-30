@@ -1,58 +1,43 @@
 :root {
   --bg-color: #FFF5EC;
   --text-color: #170202;
-  --h3-color: #D17171;
+  --header-color: #170202;
 
   --a-color: #170202;
-  --a-hover-color: #260A0A;
-  --a-active-color: #311515;
+  --a-hover-color: #312d2d;
+  --a-active-color: #584c4c;
+  --a-decoration: underline;
+  --a-decoration-hover: none;
 
   --btn-text-color: #FFF;
   --btn-bg-color: #D17171;
-  --btn-bg-hover-color: #FC6363;
-  --btn-bg-active-color: #E45151;
+  --btn-bg-hover-color: #df7c7c;
+  --btn-bg-active-color: #c96969;
   --btn-border-radius: 8px;
+
+  --eye-shadow-color: #FFD2A8;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:500&display=swap');]
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap');
-
-
-#top-eye {
-  width: 313px;
-  height: 160px;
-  margin-top: -17px;
-  display: inline-block;
+.eye-opened {
+  display: none;
 }
-
-#right-eye {
-  width: 400px;
-  height: 212px;
-  display: inline-block;
-  position: absolute;
-  top: 415px;
-  right: 0;
+.eye-closed {
+  display: block;
 }
 
 body {
-//styleName: Body 1;
-font-family: Red Hat Text;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: 36px;
-letter-spacing: 0.02em;
-text-align: left;
-
+  background-color: var(--bg-color);
+  font: 400 24px/1.5 'Red Hat Text', sans-serif;
+  color: var(--text-color);
 }
 
 a {
   color: var(--a-color);
-  text-decoration: underline;
+  text-decoration: var(--a-decoration);
 }
 a:hover {
   color: var(--a-hover-color);
-  text-decoration: none;
+  text-decoration: var(--a-decoration-hover);
 }
 a:active {
   color: var(--a-active-color);
@@ -60,35 +45,18 @@ a:active {
 }
 
 h1, h2 {
-  //styleName: H1;
-font-family: Merriweather;
-font-size: 48px;
-font-style: normal;
-font-weight: 900;
-line-height: 70px;
-letter-spacing: 0.03em;
-text-align: left;
-
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  color: var(--header-color);
+  margin-bottom: 40px;
 }
 
-h3 {
-  //styleName: H3;
-font-family: Merriweather;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 30px;
-letter-spacing: 0em;
-text-align: left;
-
-}
-
-h1 {
-  margin-bottom: 0.825em;
+h2 {
+  font-size: 32px;
 }
 
 p {
-  margin-bottom: 1em;
+  margin-bottom: 40px;
 }
 
 .btn {
@@ -119,27 +87,147 @@ p {
 
 .top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 34px;
 }
+.top > svg {
+  width: 313px;
+  height: 160px;
+  margin-top: -17px;
+  display: inline-block;
+}
+.top .link {
+  margin-right: 3em;
+}
+.top .link svg {
+  vertical-align: -1px;
+}
+.top .link__cv {
+  margin-left: auto;
+}
+.top .link__back {
+  text-decoration: none;
+}
+
+.mobile-eyes {
+  display: none;
+}
 
 .text {
+  font-family: 'Red Hat Text', sans-serif;
   width: 65%;
+}
+.text .small {
+  font-size: 18px;
+}
+
+.main-right-eye {
+  width: 400px;
+  height: 212px;
+  display: inline-block;
+  position: absolute;
+  top: 415px;
+  right: 0;
+}
+
+.section {
+  margin: 2em 0;
+}
+.section > section {
+  width: 65%;
+}
+
+.section-block {
+  display: flex;
+}
+.section-block section {
+  width: 65%;
+}
+.section-block aside {
+  width: 30%;
+  margin-left: auto;
+}
+.section-block aside svg {
+  max-width: 100%;
+  height: 220px;
+}
+
+.img {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.img img {
+  max-width: 100%;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+.img small {
+  flex-basis: 100%;
+  font: 400 12px/1.175 'Rubik', sans-serif;
+}
+.img__80p {
+  width: 80%;
+}
+.img__gif img {
+  border: none;
+}
+.img__diptych img {
+  width: 50%;
+  margin-left: -1px;
+}
+.img__triptych img {
+  width: 33%;
+  margin-left: -1px;
+}
+.img__diptych.img__gif img:first-of-type {
+  width: calc(50% - 1em);
+  margin-right: 1em;
+}
+
+.case-nav {
+  width: 65%;
+  font: 400 12px/1.23 'Rubik', sans-serif;
+  margin: 60px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.case-nav a {
+  flex-grow: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.085rem 0.85rem 0.1rem;
+  border: 1px solid #000;
+  margin: -1px 0 0 -1px;
+}
+.case-nav a:hover, a.active {
+  color: #fff;
+  background-color: #000;
+}
+.case-nav a:active {
+  color: #000;
+  background-color: #fff;
+}
+
+.footer h2 {
+  margin-bottom: 14px;
 }
 
 .contacts {
   color: var(--a-color);
   position: relative;
 }
-.contacts::after {
-  content: "⇩";
-  font-size: 134px;
-  color: var(--text-color);
+.contacts svg {
   position: absolute;
   top: 50%;
   left: 390px;
-  transform: rotate(90deg) translateX(-100%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.mobile-eye svg {
+  display: none;
 }
 
 .links {
@@ -153,6 +241,10 @@ p {
   margin-bottom: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 
 @media (max-width: 998px) {
   .links a {
@@ -162,23 +254,13 @@ p {
 }
 
 @media (max-width: 768px) {
-  #top-eye {
-    width: 137px;
-    height: 74px;
-    margin-top: 5px;
-  }
-
-  #right-eye {
-    display: none;
-  }
-
   body {
     font-size: 20px;
   }
 
   h1, h2 {
+    font-family: 'Merriweather', serif;
     font-size: 30px;
-    margin-bottom: 0.5em;
   }
 
   .btn {
@@ -187,18 +269,82 @@ p {
   }
 
   .top {
+    justify-content: space-between;
+    padding-top: 18px;
     margin-bottom: 24px;
   }
+  .top > svg {
+    display: none;
+  }
+  .top .link {
+    margin: 0;
+  }
 
-  .text {
+  .mobile-eyes {
+    height: 130px;
+    margin: 0 -10px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  .mobile-eyes svg {
+    position: absolute;
+  }
+  .mobile-eyes svg:first-of-type {
+    width: 137px;
+    height: 140px;
+    top: -30px;
+    left: 10px;
+  }
+  .mobile-eyes svg:last-of-type {
+    width: 166px;
+    height: 140px;
+    top: -20px;
+    right: -60px;
+  }
+
+  .text,
+  .case-nav,
+  .section > section,
+  .img__80p {
     width: 100%;
   }
 
-  .contacts::after {
-    font-size: 94px;
-    top: -90px;
-    left: 230px;
-    transform: rotate(90deg);
+  .section-block {
+    flex-wrap: wrap;
+  }
+  .section-block section,
+  .section-block aside {
+    width: 100%;
+  }
+  .section-block aside svg {
+    display: none;
+  }
+
+  .main-right-eye {
+    display: none;
+  }
+
+  .contacts svg {
+    top: -30px;
+    left: 190px;
+    -webkit-transform: translateY(-50%) scale(0.7);
+    transform: translateY(-50%) scale(0.7);
+  }
+
+  .mobile-eye {
+    padding: 0 80px 0.565em 10px;
+    margin: 0 -10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .mobile-eye svg {
+    width: 166px;
+    height: 140px;
+    display: block;
+    position: absolute;
+    top: -30px;
+    right: -60px;
   }
 
   .links a {
