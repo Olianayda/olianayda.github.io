@@ -1,5 +1,14 @@
 let d = document;
 
+document.addEventListener('DOMContentLoaded', function () {
+  const navbar = body.querySelector('.navbar');
+  const button = body.querySelector('.burger').addEventListener('click', (event) => {
+    // event.stopPropagation();
+    console.log(event.type);
+    navbar.classList.toggle('active');
+  });
+});
+
 d.querySelectorAll('.js-svg').forEach(place => {
   let svg = d.querySelector(place.dataset.svg).cloneNode(true);
   svg.removeAttribute('id');
