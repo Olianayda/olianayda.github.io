@@ -144,12 +144,37 @@ p {
   padding: 36px 1px 16px;
 }
 
-.text-block__descr_sm {
-  padding: 4px 0 8px;
-}
-
 .what-i-do .text-block__descr p:last-child {
   margin-bottom: 0;
+}
+
+.want-to-do .text-block .text-block__title h2 {
+  text-align: center;
+}
+
+.text-block_sub .text-block__title {
+  padding-top: 24px;
+}
+
+.text-block_sub:nth-child(2) .text-block__title {
+  padding: 24px 1px 4px;
+}
+
+.description {
+  padding: 4px 2px 8px 1px;
+}
+
+.description__paragraph:first-child {
+  margin-bottom: 40px;
+}
+
+.description__paragraph:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.text-block__descr_sm .description__paragraph, .description__link {
+  font-size: 18px;
+  line-height: 140%;
 }
 
 .avatar {
@@ -165,25 +190,6 @@ p {
   line-height: 19px;
   padding: 16px 0 4px;
   text-align: center;
-}
-
-.want-to-do .text-block .text-block__title h2 {
-  text-align: center;
-}
-
-
-
-.text-block_sub .text-block__title {
-  padding-top: 24px;
-}
-
-.text-block_sub:nth-child(2) .text-block__title{
-  padding: 24px 1px 4px;
-}
-
-.text-block__descr_sm:nth-child(2) p, a {
-  font-size: 18px;
-  line-height: 140%;
 }
 
 .hidden {
