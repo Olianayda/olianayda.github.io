@@ -2,9 +2,10 @@ let d = document;
 
 document.addEventListener('DOMContentLoaded', function () {
   const navbar = body.querySelector('.navbar');
-  const button = body.querySelector('.burger').addEventListener('click', (event) => {
+  const button = body.querySelector('.burger');
+  button.addEventListener('click', (event) => {
     // event.stopPropagation();
-    console.log(event.type);
+    button.classList.toggle('active');
     navbar.classList.toggle('active');
   });
 });

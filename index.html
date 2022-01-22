@@ -136,7 +136,7 @@
     <header class="header">
       <div class="container">
         <div class="js-svg" data-svg="#left-eye"></div>
-        <nav class="navbar">
+        <nav class="navbar active">
           <a href="https://unicornwitnesses.com" title="Go to unicorn witnesses website" target="_blank"
             class="link cta-unicorn-witnesses url-unicorn-witnesses">Unicorn Witnesses</a>
           <a href="mailto:" class="link">Email me</a>
@@ -144,14 +144,14 @@
             class="link link__cv" title="Olga Nayda CV curriculum vitae" target="_blank">CV</a>
           <a href="case_study.html" class="link link__case js-blink">Blog</a>
         </nav>
-        <div class="header__burger burger">
+        <a class="header__burger burger">
           <div class="burger__button">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <div class="burger__label">Menu</div>
-        </div>
+          <!-- <div class="burger__label">Menu</div> -->
+        </a>
       </div>
     </header>
 
@@ -188,7 +188,8 @@
             <div class="avatar">
               <picture>
                 <source type="image/webp" srcset="./img/avatar.webp 1x, ./img/avatar@2x.webp 2x">
-                <img src="./img/avatar.jpg" srcset="./img/avatar@2x.jpg 2x" loading="lazy" width="296px" height="296px" alt="Аватар Ольги Найда">
+                <img src="./img/avatar.jpg" srcset="./img/avatar@2x.jpg 2x" loading="lazy" width="296px" height="296px"
+                  alt="Аватар Ольги Найда">
               </picture>
               <div class="avatar__caption text-olga_nayda-picture-caption">This is how Olia Nayda looks in 2021</div>
             </div>
@@ -321,26 +322,58 @@
 
     <footer class="footer">
       <div class="container">
-        <h2>Contact me</h2>
-        <p class="contacts">
-          Email: <a href="mailto:olianayda@gmail.com" target="_blank">olianayda@gmail.com</a> <br>
-          WhatsApp: <a href="https://wa.me/79002326658" target="_blank">+7 900 232-66-58</a> <br>
-          <a href="https://t.me/olianayda" target="_blank">Telegram</a>,
-          <a href="skype:olianayda" target="_blank">Skype</a>: @olianayda
-        </p>
-
-        <h2>Socials: @olianayda</h2>
-        <p class="links">
-          <a href="https://www.linkedin.com/in/olianayda/" target="_blank">Linked In</a>
-          <a href="https://www.facebook.com/nyannayda" target="_blank">Facebook</a>
-          <a href="https://www.instagram.com/olianayda/" target="_blank">Photography Instagram</a> <br>
-          <a href="https://www.instagram.com/artnayda/" target="_blank">Calligraphy Instagram</a>
-          <a href="https://medium.com/@olianayda" target="_blank">Medium</a>
-          <a href="https://unsplash.com/@olianayda" target="_blank">Unsplash</a> <br>
-          <a href="https://www.behance.net/olianayda" target="_blank">Behance</a>
-          <a href="https://t.me/bkorenreality" target="_blank">Telegram Broken Reality</a>
-          <a href="https://t.me/naydaspeaks" target="_blank">Telegram Nayda Speaks</a>
-        </p>
+        <div class="contact-block">
+          <div class="contact-block__title">
+            <h2>Contact me</h2>
+          </div>
+          <div class="contact-block__descr">
+            <p>
+              <span class="contact__label">
+                Email:
+              </span>
+              <a href="mailto:olianayda@gmail.com" class="contact__link">
+                olianayda@gmail.com
+              </a>
+            </p>
+            <p>
+              <span class="contact__label">
+                Mobile:
+              </span>
+              <a href="tel:+79002326658" class="contact__link_phone">
+                +7 900 232-66-58
+              </a>
+              <a href="#" class="contact__link">Telegram</a>
+              <a href="#" class="contact__link">Skype</a>
+              <a href="" class="contact__link">What’sApp</a>
+            </p>
+            <p>
+              <span class="contact__label">
+                V-card with my full data
+              </span>
+              <a href="#" class="contact__link">
+                Download V-card and add Olia Nayda to contacts
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="subscribe-block">
+          <div class="subscribe-block__title">
+            <h3>Subscribe or become friends:</h3>
+          </div>
+          <div class="subscribe-block__links">
+            <a href="" class="subscribe__link">Linked In</a>
+            <a href="" class="subscribe__link">Facebook</a>
+            <a href="" class="subscribe__link">Twitter</a>
+            <a href="" class="subscribe__link">Instagram</a>
+            <a href="" class="subscribe__link">Pinterest</a>
+            <a href="" class="subscribe__link">Unsplash</a>
+            <a href="" class="subscribe__link">Medium</a>
+            <a href="" class="subscribe__link">Dribbble</a>
+            <a href="" class="subscribe__link">Behance</a>
+            <a href="" class="subscribe__link">VK</a>
+            <a href="" class="subscribe__link">Odnoklassniki</a>
+          </div>
+        </div>
       </div>
     </footer>
 

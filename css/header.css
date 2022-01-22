@@ -12,10 +12,10 @@
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  height: 90px;
-  left: 0;
+  height: 100px;
+  left: -5px;
   position: absolute;
-  top: 0;
+  top: 0px;
   width: 176px;
 }
 
@@ -36,8 +36,12 @@
 }
 
 .burger {
+  align-items: center;
   background-color: var(--text-color);
   border-radius: 10px;
+  display: flex;
+  font-size: 0;
+  gap: 8px;
   padding: 8px 16px;
   position: absolute;
   right: 16px;
@@ -45,9 +49,67 @@
   z-index: 1000;
 }
 
-.burger__label {
+.burger::after {
+  content: 'Menu';
   color: #fff;
+  display: inline-block;
   font-size: 16px;
   font-weight: 700;
-  line-height: 140%;
+  line-height: 22.4px;
+  width: 44px;
+}
+
+.burger__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 17px;
+  width: 24px;
+}
+
+.burger__button span::after {
+  display: block;
+  background-color: #fff;
+  content: '';
+  height: 3px;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s linear;
+  width: 100%;
+}
+
+.navbar {
+  background-color: var(--text-color);
+  color: #fff;
+}
+
+.navbar.active .link {
+  color: #fff;
+}
+
+.burger__button span:nth-child(2)::after {
+  top: 7px;
+}
+
+.burger__button span:nth-child(3)::after {
+  top: 14px;
+}
+
+.burger.active::after {
+  content: 'Close';
+}
+
+.active .burger__button span:nth-child(2)::after {
+  display: none;
+}
+
+.active .burger__button span:nth-child(1)::after {
+  top: 7px;
+  transform: rotate(45deg);
+}
+
+.active .burger__button span:nth-child(3)::after {
+  top: 7px;
+  transform: rotate(-45deg);
 }

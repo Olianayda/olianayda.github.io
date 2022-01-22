@@ -70,6 +70,8 @@ p {
 
 .wrapper {
   overflow: hidden;
+  position: relative;
+  height: 7161px;
   width: 100%;
   z-index: 0;
 }
@@ -78,8 +80,6 @@ p {
   padding: 0 16px;
   width: 100%;
 }
-
-.link {}
 
 .content {
   padding-top: 116px;
