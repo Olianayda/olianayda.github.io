@@ -5,6 +5,7 @@
   --bg-color: #FFF5EC;
   --text-color: #170202;
   --primary-color: #d17171;
+  --eye-shadow-color: #FFD2A8;
 }
 
 * {
@@ -71,7 +72,6 @@ p {
 .wrapper {
   overflow: hidden;
   position: relative;
-  height: 7161px;
   width: 100%;
   z-index: 0;
 }
@@ -149,7 +149,11 @@ p {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 744px) {
+
+  * {
+    line-height: 36px;
+  }
 
   h1 {
     font-size: 48px;
@@ -157,34 +161,45 @@ p {
   }
 
   .container {
-    padding: 0 24px;
-  }
-
-  .container .eye {
-    height: 160px;
-    left: 36px;
-    position: absolute;
-    top: -17px;
-    width: 313px;
-  }
-
-  .navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 37px;
-    left: 24px;
-    top: 201px;
-    width: auto;
-    height: auto;
-  }
-
-  .burger {
-    display: none;
+    padding: 0 26px 0 24px;
   }
 
   .content {
-    padding-top: 253px;
+    padding: 253px 16px 0;
+  }
+
+  .text-block,
+  .text-block_sub {
+    padding-right: 42px;
+  }
+
+  .want-to-do .text-block .text-block__title h2 {
+    text-align: left;
+  }
+
+  section:not(.what-i-do) {
+    padding-left: 6px;
+  }
+
+  .avatar-section {
+    padding: 78px 0 24px;
+  }
+
+  .avatar {
+    /* padding-left: 6px; */
+    width: 296px;
+  }
+
+  .avatar img {
+    margin: 0;
+  }
+
+  .work-with {
+    margin-top: 52px;
+  }
+
+  .text-block__descr_sm {
+    margin-top: 24px;
   }
 }
 
