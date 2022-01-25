@@ -198,6 +198,10 @@ p {
     margin-top: 52px;
   }
 
+  .text-block_sub:nth-child(2) {
+    margin-top: 155px;
+  }
+
   .text-block__descr_sm {
     margin-top: 24px;
   }
