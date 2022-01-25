@@ -69,6 +69,10 @@ p {
   margin-bottom: 24px;
 }
 
+.main-right-eye {
+  display: none;
+}
+
 .wrapper {
   overflow: hidden;
   position: relative;
@@ -158,6 +162,20 @@ p {
   h1 {
     font-size: 48px;
     line-height: 146%;
+  }
+
+  .main-right-eye {
+    display: block;
+    height: 212px;
+    right: -20px;
+    position: absolute;
+    top: -49px;
+    width: 400px;
+  }
+
+  .main-right-eye .eye {
+    height: 100%;
+    width: 100%;
   }
 
   .container {
