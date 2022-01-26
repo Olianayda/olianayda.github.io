@@ -149,7 +149,7 @@ p {
   display: none;
 }
 
-.column-right .contact-block {
+.column-right .contact-block__wrapper {
   display: none;
 }
 
