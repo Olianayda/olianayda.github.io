@@ -82,7 +82,11 @@ p:nth-child(2) .contact__link:last-child::after {
   }
 
   .footer {
-    padding: 0 18px;
+    padding: 21px 18px 0;
+  }
+
+  .footer__nav .contact-block {
+    display: none;
   }
 
   .chat-block {

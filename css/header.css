@@ -28,7 +28,7 @@
   top: 0;
   transition: 0.5s left ease-in;
   width: 100%;
-  z-index: 999;
+  z-index: 500;
 }
 
 .navbar.active {

@@ -3,6 +3,12 @@ let d = document;
 document.addEventListener('DOMContentLoaded', function () {
   const navbar = body.querySelector('.navbar');
   const button = body.querySelector('.burger');
+  const contactBtn = body.querySelector('.column-right .contact-block__wrapper');
+
+  contactBtn.addEventListener('click', (event) => {
+    contactBtn.classList.toggle('hide');
+  })
+
   button.addEventListener('click', (event) => {
     // event.stopPropagation();
     button.classList.toggle('active');
@@ -40,11 +46,6 @@ body.addEventListener('mousemove', (e) => {
   });
 });
 
-d.querySelector('#to-contacts').addEventListener('click', (e) => {
-  body.scrollIntoView({ block: 'end',  behavior: 'smooth' });
-  e.preventDefault();
-});
-
 d.querySelectorAll('.case-nav a').forEach(link => {
   link.addEventListener('click', function(e) {
     let target = this.hash;
@@ -62,7 +63,6 @@ d.querySelectorAll('.case-nav a').forEach(link => {
 
 setTimeout(() => {
   d.querySelectorAll('.eye').forEach(eye => {
-    eye.querySelector('.eye-closed').style.display = 'none';
     eye.querySelector('.eye-opened').style.display = 'block';
     eye.querySelector('.eye-eyelid').style.fill = '#FFFFFF';
   });
