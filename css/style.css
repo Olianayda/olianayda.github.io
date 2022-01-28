@@ -35,7 +35,7 @@ h1 {
   font-size: 32px;
   font-weight: 900;
   letter-spacing: 0.03em;
-  line-height: 44px;
+  line-height: 137.5%;
 }
 
 h2 {
@@ -66,7 +66,9 @@ a:visited {
 }
 
 p {
-  margin-bottom: 24px;
+  margin-bottom: 1em;
+  /* font-size: inherit; */
+  line-height: 150%;
 }
 
 .main-right-eye {
@@ -155,10 +157,6 @@ p {
 
 @media (min-width: 744px) {
 
-  * {
-    line-height: 36px;
-  }
-
   h1 {
     font-size: 48px;
     line-height: 146%;
@@ -221,6 +219,7 @@ p {
 
   .text-block__descr_sm {
     margin-top: 24px;
+    line-height: 150%;
   }
 
   .column-right .contact-block__wrapper {
@@ -290,22 +289,16 @@ p {
     line-height: 133.3%;
   }
 
-  .navbar {
-    top: 0;
-    right: calc(0.9vw + 24px);
-    justify-content: flex-end;
-  }
-
   .container {
     margin: 0 auto;
     max-width: calc(86.1vw + 48px);
   }
 
-  .header>.container {
-    justify-content: flex-end;
-  }
-
   .content {
     padding-top: 26.79vh;
+  }
+
+  .text-block__descr_sm .description__paragraph, .description__link {
+    font-size: 2.22vh;
   }
 }

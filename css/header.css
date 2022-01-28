@@ -149,3 +149,18 @@
     display: none;
   }
 }
+
+@media (min-width: 1440px) {
+  .navbar {
+    top: 6.41vh;
+    max-width: 34.6vw;
+    left: auto;
+    padding: 0 0.97vw;
+    right: 1.8vw;
+    /* position: absolute; */
+  }
+
+  .navbar a {
+    font-size: 2.22vh;
+  }
+}
