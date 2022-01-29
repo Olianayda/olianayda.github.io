@@ -65,6 +65,10 @@ a:visited {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 p {
   margin-bottom: 1em;
   /* font-size: inherit; */
@@ -148,10 +152,6 @@ p {
 }
 
 .hidden {
-  display: none;
-}
-
-.column-right .contact-block__wrapper {
   display: none;
 }
 

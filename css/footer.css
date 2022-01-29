@@ -149,9 +149,6 @@ p:nth-child(2) .contact__link:last-child::after {
 }
 
 @media (min-width: 1440px) {
-  .footer {
-    margin-top: 1440px;
-  }
 
   .footer .container {
     flex-direction: row;
