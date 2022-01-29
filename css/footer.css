@@ -135,15 +135,40 @@ p:nth-child(2) .contact__link:last-child::after {
 
   .logo {
     display: inline-block;
+    height: 235px;
     padding-top: 7px;
     position: relative;
     left: -42px;
   }
+
+  .logo img {
+    height: 100%;
+    object-fit: cover;
+
+  }
 }
 
 @media (min-width: 1440px) {
+  .footer {
+    margin-top: 1440px;
+  }
 
   .footer .container {
     flex-direction: row;
+  }
+
+  .footer__nav {
+    padding-right: 15.277778vw;
+  }
+
+  .subscribe-block {
+    margin-top: 0;
+  }
+
+  .logo {
+    height: 20.486vh;
+    width: 19.359vw;
+    top: 16.15vh;
+    left: -7.222vw;
   }
 }

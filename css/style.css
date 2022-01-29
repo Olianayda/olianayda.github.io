@@ -41,11 +41,11 @@ h1 {
 h2 {
   color: var(--primary-color);
   font-size: 32px;
-  line-height: 48px;
+  line-height: 150%;
 }
 
 .text-h2-what_i_do {
-  line-height: 40px;
+  line-height: 132%;
 }
 
 h3 {
@@ -289,16 +289,54 @@ p {
     line-height: 133.3%;
   }
 
+  section:not(.what-i-do) {
+    padding-left: 0px;
+  }
+
+  .work-with {
+    margin: 0;
+  }
+
+  .content {
+    padding-top: 24.90vh;
+  }
+
   .container {
+    display: flex;
     margin: 0 auto;
     max-width: calc(86.1vw + 48px);
   }
 
-  .content {
-    padding-top: 26.79vh;
+  .column-left {
+    flex: 0 1 42.57vw;
+  }
+
+  .text-block,
+  .text-block_sub {
+    padding-right: 0;
+  }
+
+  .text-block_sub:nth-child(2) {
+    margin-top: 0;
   }
 
   .text-block__descr_sm .description__paragraph, .description__link {
     font-size: 2.22vh;
+  }
+
+  .avatar-section {
+    padding: 0;
+  }
+
+
+  .avatar {
+    display: inline-block;
+  }
+
+  .main-right-eye {
+    height: 26.14vh;
+    top: 21.58vh;
+    right: 6.94444vw;
+    width: 27.7778vw;
   }
 }
