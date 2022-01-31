@@ -14,6 +14,10 @@
   padding: 36px 1px 16px;
 }
 
+.contact-block__title h2 {
+  color: var(--text-color);
+}
+
 .contact-block__descr {
   padding: 4px 0 8px;
   font-size: 18px;
@@ -104,7 +108,7 @@ p:nth-child(2) .contact__link:last-child::after {
 
   .chat-block__title_link {
     color: var(--primary-color);
-    font-size: 32px;
+    font-size: 1em;
     font-weight: 900;
     line-height: 150%;
     border-bottom: none;

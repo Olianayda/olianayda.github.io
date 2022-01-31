@@ -3,7 +3,7 @@ let d = document;
 document.addEventListener('DOMContentLoaded', function () {
   const navbar = body.querySelector('.navbar');
   const button = body.querySelector('.burger');
-  const contactBtn = body.querySelector('.column-right .contact-block__wrapper');
+  const contactBtn = body.querySelector('.column-right .contact-block');
 
   contactBtn.addEventListener('click', (event) => {
     contactBtn.classList.toggle('hide');
