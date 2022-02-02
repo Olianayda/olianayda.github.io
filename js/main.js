@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const navbar = body.querySelector('.navbar');
   const button = body.querySelector('.burger');
   const contactBtn = body.querySelector('.column-right .contact-block');
+  const content_block = document.querySelector('.content');
 
   contactBtn.addEventListener('click', (event) => {
     contactBtn.classList.toggle('hide');
@@ -13,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // event.stopPropagation();
     button.classList.toggle('active');
     navbar.classList.toggle('active');
+    navbar.classList.contains('.active') ? alert('asd') : null;
+    // content_block.style.display = 'none';
   });
 });
 

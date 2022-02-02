@@ -36,6 +36,10 @@
   line-height: 139%;
 }
 
+.contact__link_phone {
+  border-bottom: none;
+}
+
 p:nth-child(2) .contact__link::after {
   content: ", ";
 }
