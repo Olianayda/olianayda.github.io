@@ -333,6 +333,10 @@ p {
     padding: 1.5em 0.024em 0.66667em;
   }
 
+  .want-to-do .text-block .text-block__title {
+    margin-top: 0.66667em;
+  }
+
   .text-block__descr_sm .description__paragraph, .description__link {
     font-size: 2.22vh;
   }
@@ -340,7 +344,6 @@ p {
   .avatar-section {
     padding: 0;
   }
-
 
   .avatar {
     box-sizing: content-box;
@@ -356,19 +359,52 @@ p {
 
   .avatar__caption {
     font-size: 1.73vh;
-    padding: 0.666em 0 0.1666em;
+    padding: 1.1em 0 0.1666em;
   }
 
   .main-right-eye {
     height: 26.14vh;
-    top: 21.58vh;
-    right: 6.94444vw;
+    top: 22.58vh;
+    right: 8.3vw;
     width: 27.7778vw;
   }
 
-
+  .column-right .contact-block {
+    border: none;
+    padding: 0.66667em 0 1.33334em;
+    right: 4.5em;
+    top: 15.6em;
+  }
 
   .contact-block__button {
     display: none;
+  }
+
+  .column-right .contact-block .contact-block__title h2{
+    font-size: 2.96vh;
+    line-height: 160%;
+  }
+
+  .column-right .contact-block .contact-block__descr p {
+    display: inline-block;
+  }
+
+  .column-right .contact-block .contact__link {
+    display: inline-block;
+    border-bottom: none;
+    font-size: 0.75em;
+    line-height: 140%;
+    text-decoration: underline;
+  }
+
+  .column-right .follow-block {
+    position: absolute;
+    right: 4.5em;
+    top: 54.042em;
+    width: 11.875em;
+  }
+
+  .follow-block .follow__link {
+    font-size: 2.22vh;
   }
 }
