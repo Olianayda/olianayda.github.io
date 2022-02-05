@@ -16,8 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
     button.classList.toggle('active');
     navbar.classList.toggle('active');
     navbar.classList.contains('.active') ? alert('asd') : null;
-    content_block.style.display = 'none';
     footer.classList.toggle('active');
+
+    // setTimeout(content_block.classList.toggle('hide'), 1000);
+    
   });
 });
 

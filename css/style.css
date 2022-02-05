@@ -73,7 +73,6 @@ a:hover {
 
 p {
   margin-bottom: 1em;
-  /* font-size: inherit; */
   line-height: 150%;
 }
 
@@ -82,10 +81,15 @@ p {
 }
 
 .wrapper {
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   width: 100%;
   z-index: 0;
+}
+
+.navbar.active,
+.footer.active {
+  overflow: hidden;
 }
 
 .container {
@@ -95,6 +99,10 @@ p {
 
 .content {
   padding-top: 116px;
+}
+
+.content.hide {
+  display: none;
 }
 
 .main-title {
@@ -153,7 +161,8 @@ p {
   text-align: center;
 }
 
-.column-right .contact-block {
+.column-right .contact-block,
+.column-right .follow-block {
   display: none;
 }
 
@@ -251,7 +260,7 @@ p {
     position: absolute;
     right: -2px;
     top: 15.625em;
-    transition: right 0.5s ease-in;
+    transition: all 0.5s ease-in;
     width: 11.875em;
     z-index: 900;
   }
@@ -400,6 +409,7 @@ p {
   }
 
   .column-right .follow-block {
+    display: block;
     position: absolute;
     right: 4.5em;
     top: 103vh;

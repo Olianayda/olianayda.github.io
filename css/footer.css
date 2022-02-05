@@ -2,7 +2,8 @@
   bottom: 7px;
   padding-top: 40px;
   position: relative;
-  bottom: 7px;
+  top: auto;
+  transition: 2s top ease-in;
 }
 
 .contact-block,
@@ -80,6 +81,43 @@ p:nth-child(2) .contact__link:last-child::after {
 .logo {
   display: none;
   border-bottom: none;
+}
+
+.footer.active {
+  background-color: var(--text-color);
+  padding-top: 0;
+  position: absolute;
+  top: 418px;
+  transition: 2s top ease-in;
+}
+
+.footer.active .contact-block__title>h2, 
+.footer.active a.contact__link,
+.footer.active a.contact__link_phone,
+.footer.active .subscribe-block__title>h3,
+.footer.active .subscribe__link
+{
+  color: #fff;
+}
+
+.footer.active a.contact__link,
+.footer.active a.contact__link_phone {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.footer.active a.contact__link_phone {
+  display: block;
+  text-decoration: none;
+}
+
+.footer.active .footer__nav .contact-block .contact-block__title {
+  padding-top: 24px;
+}
+
+.footer.active .footer__nav .contact-block .contact-block__title h2 {
+  font-size: 24px;
+  line-height: 160%;
 }
 
 @media (min-width: 744px) {
@@ -175,5 +213,9 @@ p:nth-child(2) .contact__link:last-child::after {
     width: 19.359vw;
     top: 16.15vh;
     left: -7.222vw;
+  }
+
+  .contact__label {
+    font-size: 2.22vh;
   }
 }
