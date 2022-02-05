@@ -3,19 +3,21 @@ let d = document;
 document.addEventListener('DOMContentLoaded', function () {
   const navbar = body.querySelector('.navbar');
   const button = body.querySelector('.burger');
-  const contactBtn = body.querySelector('.column-right .contact-block');
+  const contactBlock = body.querySelector('.column-right .contact-block');
+  const contactBtn = body.querySelector('.column-right .contact-block .contact-block__button');
   const content_block = document.querySelector('.content');
 
   contactBtn.addEventListener('click', (event) => {
+    contactBlock.classList.toggle('hide');
     contactBtn.classList.toggle('hide');
   })
 
   button.addEventListener('click', (event) => {
-    // event.stopPropagation();
     button.classList.toggle('active');
     navbar.classList.toggle('active');
     navbar.classList.contains('.active') ? alert('asd') : null;
-    // content_block.style.display = 'none';
+    content_block.style.display = 'none';
+    footer.classList.toggle('active');
   });
 });
 
