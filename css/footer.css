@@ -63,6 +63,7 @@ p:nth-child(2) .contact__link:last-child::after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      justify-content: space-between;
   row-gap: 23px;
 }
 
@@ -76,6 +77,7 @@ p:nth-child(2) .contact__link:last-child::after {
 
 .subscribe__link {
   flex: 0 0 134px;
+  word-wrap: break-word;
 }
 
 .logo {
@@ -165,14 +167,14 @@ p:nth-child(2) .contact__link:last-child::after {
   .subscribe-block__links {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+    -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
     grid-template-columns: repeat(3, 1fr);
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
-    -webkit-column-gap: 10px;
-       -moz-column-gap: 10px;
-            column-gap: 10px;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
   }
 
   .subscribe-block {
@@ -188,9 +190,10 @@ p:nth-child(2) .contact__link:last-child::after {
   }
 
   .logo img {
-    height: 100%;
     object-fit: cover;
-
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 }
 
