@@ -17,9 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
     navbar.classList.toggle('active');
     navbar.classList.contains('.active') ? alert('asd') : null;
     footer.classList.toggle('active');
-
-    // setTimeout(content_block.classList.toggle('hide'), 1000);
-    
   });
 });
 
@@ -50,21 +47,6 @@ body.addEventListener('mousemove', (e) => {
     ball.style.transform = `rotate(${rotationDeg}deg)`;
     ball.style.transformOrigin = ball.dataset.eye == 'left' ? `-10px -10px` : `10px 10px`;
     pupil.style.transform = `rotate(-${rotationDeg}deg)`;
-  });
-});
-
-d.querySelectorAll('.case-nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    let target = this.hash;
-
-    try {
-      target = d.querySelector(this.hash);
-      target.scrollIntoView({ block: 'start',  behavior: 'smooth' });
-    } catch (e) {
-      return false;
-    }
-
-    e.preventDefault();
   });
 });
 
