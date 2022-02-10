@@ -1,5 +1,25 @@
 let d = document;
 
+document.addEventListener('DOMContentLoaded', function () {
+  const navbar = body.querySelector('.navbar');
+  const button = body.querySelector('.burger');
+  const contactBlock = body.querySelector('.column-right .contact-block');
+  const contactBtn = body.querySelector('.column-right .contact-block .contact-block__button');
+  const content_block = document.querySelector('.content');
+
+  contactBtn.addEventListener('click', (event) => {
+    contactBlock.classList.toggle('hide');
+    contactBtn.classList.toggle('hide');
+  })
+
+  button.addEventListener('click', (event) => {
+    button.classList.toggle('active');
+    navbar.classList.toggle('active');
+    navbar.classList.contains('.active') ? alert('asd') : null;
+    footer.classList.toggle('active');
+  });
+});
+
 d.querySelectorAll('.js-svg').forEach(place => {
   let svg = d.querySelector(place.dataset.svg).cloneNode(true);
   svg.removeAttribute('id');
@@ -30,29 +50,8 @@ body.addEventListener('mousemove', (e) => {
   });
 });
 
-d.querySelector('#to-contacts').addEventListener('click', (e) => {
-  body.scrollIntoView({ block: 'end',  behavior: 'smooth' });
-  e.preventDefault();
-});
-
-d.querySelectorAll('.case-nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    let target = this.hash;
-
-    try {
-      target = d.querySelector(this.hash);
-      target.scrollIntoView({ block: 'start',  behavior: 'smooth' });
-    } catch (e) {
-      return false;
-    }
-
-    e.preventDefault();
-  });
-});
-
 setTimeout(() => {
   d.querySelectorAll('.eye').forEach(eye => {
-    eye.querySelector('.eye-closed').style.display = 'none';
     eye.querySelector('.eye-opened').style.display = 'block';
     eye.querySelector('.eye-eyelid').style.fill = '#FFFFFF';
   });
