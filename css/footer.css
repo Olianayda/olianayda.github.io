@@ -64,6 +64,7 @@ p:nth-child(2) .contact__link:last-child::after {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       justify-content: space-between;
+  /* column-gap: 23px; */
   row-gap: 23px;
 }
 
@@ -76,7 +77,7 @@ p:nth-child(2) .contact__link:last-child::after {
 }
 
 .subscribe__link {
-  flex: 0 0 134px;
+  flex: 0 0 45%;
   word-wrap: break-word;
 }
 

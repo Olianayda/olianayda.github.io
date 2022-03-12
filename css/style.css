@@ -38,6 +38,11 @@ h1 {
   line-height: 137.5%;
 }
 
+h1 > a {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 h2 {
   color: var(--primary-color);
   font-size: 32px;
@@ -113,6 +118,7 @@ p {
   padding: 36px 1px 16px;
 }
 
+.text-block_sub p:last-child,
 .what-i-do .text-block__descr p:last-child {
   margin-bottom: 0;
 }
@@ -130,7 +136,7 @@ p {
 }
 
 .description {
-  padding: 4px 2px 8px 1px;
+  padding: 4px 2px 16px 1px;
 }
 
 .description__paragraph:first-child {
@@ -147,7 +153,9 @@ p {
 }
 
 .avatar {
+  margin: 0 auto;
   padding: 32px 0 14px;
+  width: 296px;
 }
 
 .avatar img {
@@ -221,7 +229,7 @@ p {
   }
 
   .avatar {
-    width: 296px;
+    margin-left: 0;
   }
 
   .avatar img {
@@ -232,12 +240,7 @@ p {
     margin-top: 52px;
   }
 
-  .text-block_sub:nth-child(2) {
-    margin-top: 155px;
-  }
-
   .text-block__descr_sm {
-    margin-top: 1em;
     line-height: 150%;
   }
 
@@ -334,10 +337,6 @@ p {
   .text-block,
   .text-block_sub {
     padding-right: 0;
-  }
-
-  .text-block_sub:nth-child(2) {
-    margin-top: 0;
   }
 
   .text-block .text-block__title {
