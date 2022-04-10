@@ -1,10 +1,14 @@
+const urlRegexp = /url-/;
+const textRegexp = /text-/;
+const ctaRegexp = /cta-/;
+
+const lang = (window.navigator
+  ? (window.navigator.language || window.navigator.systemLanguage || window.navigator.userLanguage)
+  : 'en_us').replace('-', '_').toLowerCase();
+
 document.addEventListener('DOMContentLoaded', async function (event) {
-  const lang = (window.navigator
-    ? (window.navigator.language || window.navigator.systemLanguage || window.navigator.userLanguage)
-    : 'en_us').replace('-', '_').toLowerCase();
-  const urlRegexp = /url-/;
-  const textRegexp = /text-/;
-  const ctaRegexp = /cta-/;
+  console.time();
+  body.style.opacity = 0;
 
   const data = await getTranslations('https://translations-system.maximlitvinov.workers.dev/?id=03feca40b2b44f53b0abc71e572bd7e4');
     
@@ -22,7 +26,6 @@ document.addEventListener('DOMContentLoaded', async function (event) {
     if (Object.hasOwnProperty.call(data, key)) {
       const domElement = document.querySelectorAll(`.${key}`);
 
-      console.log(data[`${key}`][`${lang}`])
       if (domElement.length) {
         
         if (domElement.length > 1) {
@@ -36,8 +39,9 @@ document.addEventListener('DOMContentLoaded', async function (event) {
     }
   }
 
+  body.style.opacity = 1;
 
-
+  console.timeEnd();
   /* parser of page */
 
   // function hasChild(el) {
