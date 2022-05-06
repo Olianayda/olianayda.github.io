@@ -10,7 +10,7 @@
 //   console.time();
 //   body.style.opacity = 0;
 
-//   const data = await getTranslations('https://translations-system.maximlitvinov.workers.dev/?id=03feca40b2b44f53b0abc71e572bd7e4');
+//   const data = await getTranslations('URL');
     
 //   const changeData = (str, element, inputData) => {
 //     if (str.match(urlRegexp)) {
@@ -68,6 +68,3 @@
   
 // }
 
-// // getTranslations('https://jsonplaceholder.typicode.com/todos');
-
-// // url='https://translations-system.maximlitvinov.workers.dev/?id=03feca40b2b44f53b0abc71e572bd7e4'
