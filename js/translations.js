@@ -65,6 +65,14 @@
 //   return fetch(url)
 //     .then(response => response.json())
 //     .then(data => data.result);
-  
 // }
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('worker.js')
+    .then(() => navigator.serviceWorker.ready.then((worker) => {
+      worker.sync.register('syncdata');
+    }))
+  .catch(err => console.log('We got an error ', err))
+}
 
