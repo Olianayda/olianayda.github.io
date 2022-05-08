@@ -184,6 +184,13 @@ p {
   display: none;
 }
 
+.towers {
+  display: block;
+  position: relative;
+  object-fit: contain;
+  width: 100%;
+}
+
 @media (min-width: 744px) {
 
   h1 {
@@ -424,5 +431,14 @@ p {
 
   .follow-block .text-block__descr span {
     height: 25px;
+  }
+  
+  .towers {
+    display: flex;
+    position: absolute;
+    top: 120vh;
+    /* left: 4.5em; */
+    right: 4.5em;
+    width: 500px;
   }
 }

@@ -3,7 +3,7 @@
   padding-top: 40px;
   position: relative;
   top: auto;
-  transition: 2s top ease-in;
+  transition: 0.5s all linear;
 }
 
 .contact-block,
@@ -91,7 +91,6 @@ p:nth-child(2) .contact__link:last-child::after {
   padding-top: 0;
   position: absolute;
   top: 418px;
-  transition: 2s top ease-in;
 }
 
 .footer.active .contact-block__title>h2, 

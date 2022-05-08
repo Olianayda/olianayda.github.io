@@ -7,10 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const contactBtn = body.querySelector('.column-right .contact-block .contact-block__button');
   const content_block = document.querySelector('.content');
 
+  if (contactBtn) {
   contactBtn.addEventListener('click', (event) => {
     contactBlock.classList.toggle('hide');
     contactBtn.classList.toggle('hide');
-  })
+  })  
+  }
+  // contactBtn.addEventListener('click', (event) => {
+  //   contactBlock.classList.toggle('hide');
+  //   contactBtn.classList.toggle('hide');
+  // })
 
   button.addEventListener('click', (event) => {
     button.classList.toggle('active');
