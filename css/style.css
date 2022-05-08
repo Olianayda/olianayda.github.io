@@ -184,7 +184,7 @@ p {
   display: none;
 }
 
-.towers {
+.img {
   display: block;
   position: relative;
   object-fit: contain;
@@ -295,6 +295,15 @@ p {
     top: -3px;
     writing-mode: vertical-lr;
     z-index: 800;
+  }
+
+  .img_block {
+    padding: 1.5em 0;
+  }
+
+  .img {
+    width: 500px;
+    height: 600px;
   }
 }
 
@@ -431,14 +440,5 @@ p {
 
   .follow-block .text-block__descr span {
     height: 25px;
-  }
-  
-  .towers {
-    display: flex;
-    position: absolute;
-    top: 120vh;
-    /* left: 4.5em; */
-    right: 4.5em;
-    width: 500px;
   }
 }
