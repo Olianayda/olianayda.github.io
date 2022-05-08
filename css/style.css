@@ -63,8 +63,6 @@ h4 {
   line-height: 138.88889%;
 }
 
-
-
 a,
 a:visited {
   border-bottom: 2px solid var(--text-color);
@@ -184,6 +182,29 @@ p {
   display: none;
 }
 
+.img {
+  display: block;
+  position: relative;
+  object-fit: contain;
+  width: 100%;
+}
+
+.articles_list {
+  min-height: 100vh;
+  padding: 1em 0 2em;
+}
+
+.article {
+  color: var(--primary-color);
+}
+
+article a:focus .article {
+  color: var(--text-color);
+}
+.article:hover {
+  color: var(--text-color);
+}
+
 @media (min-width: 744px) {
 
   h1 {
@@ -288,6 +309,15 @@ p {
     top: -3px;
     writing-mode: vertical-lr;
     z-index: 800;
+  }
+
+  .img_block {
+    padding: 1.5em 0;
+  }
+
+  .img {
+    width: 500px;
+    height: 600px;
   }
 }
 

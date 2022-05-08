@@ -1,16 +1,22 @@
 let d = document;
 
 document.addEventListener('DOMContentLoaded', function () {
-  const navbar = body.querySelector('.navbar');
-  const button = body.querySelector('.burger');
-  const contactBlock = body.querySelector('.column-right .contact-block');
-  const contactBtn = body.querySelector('.column-right .contact-block .contact-block__button');
+  const navbar = document.querySelector('.navbar');
+  const button = document.querySelector('.burger');
+  const contactBlock = document.querySelector('.column-right .contact-block');
+  const contactBtn = document.querySelector('.column-right .contact-block .contact-block__button');
   const content_block = document.querySelector('.content');
 
+  if (contactBtn) {
   contactBtn.addEventListener('click', (event) => {
     contactBlock.classList.toggle('hide');
     contactBtn.classList.toggle('hide');
-  })
+  })  
+  }
+  // contactBtn.addEventListener('click', (event) => {
+  //   contactBlock.classList.toggle('hide');
+  //   contactBtn.classList.toggle('hide');
+  // })
 
   button.addEventListener('click', (event) => {
     button.classList.toggle('active');

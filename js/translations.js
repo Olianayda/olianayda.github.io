@@ -10,7 +10,7 @@
 //   console.time();
 //   body.style.opacity = 0;
 
-//   const data = await getTranslations('https://translations-system.maximlitvinov.workers.dev/?id=03feca40b2b44f53b0abc71e572bd7e4');
+//   const data = await getTranslations('URL');
     
 //   const changeData = (str, element, inputData) => {
 //     if (str.match(urlRegexp)) {
@@ -65,9 +65,14 @@
 //   return fetch(url)
 //     .then(response => response.json())
 //     .then(data => data.result);
-  
 // }
 
-// // getTranslations('https://jsonplaceholder.typicode.com/todos');
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('worker.js')
+    .then(() => navigator.serviceWorker.ready.then((worker) => {
+      worker.sync.register('syncdata');
+    }))
+  .catch(err => console.log('We got an error ', err))
+}
 
-// // url='https://translations-system.maximlitvinov.workers.dev/?id=03feca40b2b44f53b0abc71e572bd7e4'
